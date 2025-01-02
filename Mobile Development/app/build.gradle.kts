@@ -13,11 +13,13 @@ android {
     defaultConfig {
         applicationId = "com.application.fasrecon"
         minSdk = 24
+        //noinspection OldTargetApi
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "BASE_URL", "\"https://api-model-flask-660807228942.asia-southeast2.run.app/\"")
+        buildConfigField("String", "BASE_URL", "\"https://model-classification-660807228942.asia-southeast2.run.app/\"")
+        buildConfigField("String", "BASE_URL_CHATBOT", "\"https://nlp-model-660807228942.asia-southeast2.run.app/\"")
     }
 
     buildTypes {
@@ -28,8 +30,10 @@ android {
                 "proguard-rules.pro"
             )
             buildConfigField("String", "BASE_URL", "\"https://api-model-flask-660807228942.asia-southeast2.run.app/\"")
+            buildConfigField("String", "BASE_URL_CHATBOT", "\"https://nlp-model-660807228942.asia-southeast2.run.app/\"")
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
